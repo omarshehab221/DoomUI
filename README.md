@@ -1,4 +1,27 @@
-# Getting Started with Create React App
+# UI Components Library
+
+## ToDo
+
+- [ ] Add a CLI
+- [x] Use global colors and layout variables to allow for theme customization
+- [ ] Implement Shadcn method of adding components, where they are added to the components folder of the project
+- [x] Add Polymorphism to Components
+- [ ] Add unique animations
+- [ ] Add page transitions through the provider
+- [ ] Create a color picker component
+- [ ] Add support for RTL
+- [ ] Add support for other frameworks, like Svelte, Vue, Angular, Solid, React Native, etc.
+- [ ] Create a website with the components
+- [ ] Create a documentation website with the components
+- [ ] Create a playground website with the components
+- [ ] Create a palette generator. You can choose the colors manually or use an image, it creates the palette, the shades and the tints for light and dark modes. Also, it tells you if the contrast is good or not.
+- [ ] Create a typography generator
+- [ ] Create a grid generator
+- [ ] Create a shadow generator
+- [ ] Create a Figma file/plugin
+- [ ] Create a icon generator (with a library of icons)
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -43,4 +66,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To learn React, check out the [React documentation](https://reactjs.org/). -->
