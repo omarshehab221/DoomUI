@@ -4,24 +4,6 @@ import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
-import MagicString from 'magic-string';
-
-const preserveDirectives = () => ({
-  name: 'preserve-directives',
-  transform(code) {
-    if (code.includes('"use client"') || code.includes("'use client'")) {
-      const magicString = new MagicString(code);
-      return {
-        code: code,
-        map: magicString.generateMap({
-          hires: true,
-          includeContent: true
-        })
-      };
-    }
-    return null;
-  }
-});
 
 export default {
   input: 'src/index.ts',
@@ -30,13 +12,11 @@ export default {
       file: 'dist/index.js',
       format: 'cjs',
       sourcemap: true,
-      preserveModules: true,
     },
     {
       file: 'dist/index.esm.js',
       format: 'esm',
       sourcemap: true,
-      preserveModules: true,
     },
   ],
   plugins: [
@@ -61,7 +41,6 @@ export default {
         insertAt: 'top',
       },
     }),
-    preserveDirectives(),
     terser(),
   ],
   external: ['react', 'react-dom', 'tailwind-variants', 'next-themes', 'clsx', 'tailwind-merge'],
