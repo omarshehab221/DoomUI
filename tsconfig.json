@@ -1,33 +1,27 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "dist",
+    "sourceMap": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
       "@components/*": ["./src/components/*"],
       "@icons/*": ["./src/icons/*"],
       "@theme/*": ["./src/theme/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@*": ["./*"]
+      "@utils/*": ["./src/utils/*"]
     }
   },
-  "include": [
-    "src"
-  ],
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "src/**/*.stories.tsx", "src/**/*.test.tsx"]
 }
