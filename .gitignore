@@ -21,5 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*storybook.log*
 
-*storybook.log
+# Editor
+.idea
+.vscode
+*.swp
+*.swo
+
+# TypeScript
+*.tsbuildinfo

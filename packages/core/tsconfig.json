@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declarationDir": "dist",
+    // "rootDir": "src",
+    "paths": {
+      "@theme/*": ["./src/theme/*"],
+      "@plugins/*": ["./src/plugins/*"],
+      "@components/*": ["./src/components/*"],
+      "@utils/*": ["./src/utils/*"]
+    }
+  }
+}

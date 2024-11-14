@@ -1,0 +1,59 @@
+{
+  "name": "@doom-ui/components",
+  "version": "0.1.0",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "@doom-ui/core": "^0.1.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "framer-motion": "^11.11.11"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.4.2",
+    "@storybook/addon-interactions": "^8.4.2",
+    "@storybook/addon-themes": "^8.4.2",
+    "@storybook/blocks": "^8.4.2",
+    "@storybook/react": "^8.4.2",
+    "@storybook/react-webpack5": "^8.4.2",
+    "@storybook/test": "^8.4.2",
+    "storybook": "^8.4.2",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.119",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint-plugin-storybook": "^0.11.0",
+    "prop-types": "^15.8.1",
+    "rollup": "^4.25.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build": "rollup -c",
+    "test": "jest"
+  }
+}

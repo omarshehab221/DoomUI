@@ -1,8 +1,7 @@
 "use client";
 import type { ComponentProps, ElementType, ReactNode } from "react";
-import { tv, type VariantProps } from "tailwind-variants";
+import { tv, type VariantProps, type ClassNameValue } from "@doom-ui/core";
 import { Loading } from "@icons/Loading";
-import type { ClassNameValue } from "tailwind-merge";
 
 export const button = tv({
   slots: {
