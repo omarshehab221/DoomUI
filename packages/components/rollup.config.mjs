@@ -1,68 +1,73 @@
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import typescript from '@rollup/plugin-typescript';
-import terser from '@rollup/plugin-terser';
-import external from 'rollup-plugin-peer-deps-external';
-import postcss from 'rollup-plugin-postcss';
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve as pathResolve } from 'node:path';
-import glob from 'fast-glob';
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
+import terser from "@rollup/plugin-terser";
+import external from "rollup-plugin-peer-deps-external";
+import postcss from "rollup-plugin-postcss";
+import { fileURLToPath } from "node:url";
+import { dirname, resolve as pathResolve } from "node:path";
+import glob from "fast-glob";
+import banner2 from "rollup-plugin-banner2";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const resolveAlias = {
   entries: [
-    { find: '@components', replacement: pathResolve(__dirname, 'src/components') }
-  ]
+    {
+      find: "@components",
+      replacement: pathResolve(__dirname, "src/components"),
+    },
+  ],
 };
 
 // Get all template entry points
-const templateEntries = glob.sync('src/templates/components/*/index.ts');
+const templateEntries = glob.sync("src/templates/components/*/index.ts");
 
 export default [
   {
     input: templateEntries,
     output: {
-      dir: 'dist/templates',
-      format: 'esm',
+      dir: "dist/templates",
+      format: "esm",
       preserveModules: true,
-      preserveModulesRoot: 'src/templates',
-      sourcemap: true
+      preserveModulesRoot: "src/templates",
+      sourcemap: true,
     },
     plugins: [
       external(),
       resolve({
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        alias: resolveAlias.entries
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+        alias: resolveAlias.entries,
       }),
       commonjs(),
       typescript({
-        tsconfig: './tsconfig.json',
+        tsconfig: "./tsconfig.json",
         declaration: true,
-        declarationDir: 'dist/templates',
-        rootDir: 'src/templates',
-        outDir: 'dist/templates',
-        sourceMap: true
+        declarationDir: "dist/templates",
+        rootDir: "src/templates",
+        outDir: "dist/templates",
+        sourceMap: true,
       }),
       postcss({
         config: {
-          path: './postcss.config.js',
+          path: "./postcss.config.js",
         },
-        extensions: ['.css'],
+        extensions: [".css"],
         minimize: true,
         inject: {
-          insertAt: 'top',
+          insertAt: "top",
         },
       }),
+      banner2(() => '"use client";'),
       terser(),
     ],
     external: [
-      'react',
-      'react-dom',
-      '@doom-ui/core',
-      'framer-motion',
-      '@iconify/react'
-    ]
-  }
+      "react",
+      "react-dom",
+      "@doom-ui/core",
+      "framer-motion",
+      "@iconify/react",
+    ],
+  },
 ];
