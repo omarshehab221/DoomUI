@@ -1,6 +1,7 @@
 {
   "name": "@doom-ui/monorepo",
   "private": true,
+  "packageManager": "bun@1.1.33",
   "workspaces": [
     "packages/*"
   ],
@@ -10,7 +11,9 @@
     "lint": "turbo run lint",
     "clean": "turbo run clean",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "website:dev": "turbo run dev --filter=website",
+    "website:build": "turbo run build --filter=website"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
@@ -32,7 +35,7 @@
     "storybook": "^8.4.2",
     "style-loader": "^3.3.4",
     "tailwindcss": "^3.4.1",
-    "turbo": "^1.12.4",
+    "turbo": "^2.3.0",
     "typescript": "^5.4.2"
   }
 }
