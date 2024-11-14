@@ -1,4 +1,4 @@
-# UI Components Library
+# DoomUI
 
 [![Featurebase](https://img.shields.io/badge/Featurebase-Roadmap-green.svg)](https://doomui.featurebase.app/roadmap)
 [![DoomUI Core](https://img.shields.io/npm/v/@doom-ui/core?style=flat-square)](https://www.npmjs.com/package/@doom-ui/core)
