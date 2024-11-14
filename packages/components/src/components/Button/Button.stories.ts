@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Button } from "./Button";
+import { Button } from ".";
 import { createElement } from "react";
 // import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
