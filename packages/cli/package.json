@@ -1,6 +1,6 @@
 {
   "name": "@doom-ui/cli",
-  "version": "0.1.0",
+  "version": "0.1.0-2",
   "description": "CLI for Doom UI",
   "main": "dist/index.js",
   "bin": {
