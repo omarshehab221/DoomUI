@@ -1,15 +1,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "declarationDir": "dist",
-    // "rootDir": "./src",
+    "outDir": "./dist",
+    "declarationDir": "./dist",
+    "rootDir": "./src",
     "baseUrl": ".",
     "paths": {
       "@components": ["./src/components"],
-      "@components/*": ["./src/components/*"],
-      "@icons": ["./src/icons"],
-      "@icons/*": ["./src/icons/*"]
+      "@components/*": ["./src/components/*"]
     }
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

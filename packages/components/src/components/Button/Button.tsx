@@ -1,6 +1,7 @@
+"use client";
 import type { ComponentProps, ElementType, ReactNode } from "react";
 import { tv, type VariantProps, type ClassNameValue } from "@doom-ui/core";
-import { Loading } from "@icons/Loading";
+import { Icon } from "@iconify/react";
 
 export const button = tv({
   slots: {
@@ -153,7 +154,7 @@ export const Button = <T extends ElementType = "button">({
   startContent,
   endContent,
   isIconOnly = false,
-  animation="scale",
+  animation = "scale",
   children,
   className,
   classNames,
@@ -181,8 +182,11 @@ export const Button = <T extends ElementType = "button">({
     >
       {isIconOnly ? (
         isLoading ? (
-          <Loading
-            className={slots.spinner({ className: classNames?.spinner })}
+          <Icon
+            icon="line-md:loading-twotone-loop"
+            className={slots.spinner({
+              className: ["stroke-1.5", classNames?.spinner],
+            })}
           />
         ) : (
           <span className={slots.content({ className: classNames?.content })}>
@@ -192,8 +196,11 @@ export const Button = <T extends ElementType = "button">({
       ) : (
         <>
           {isLoading ? (
-            <Loading
-              className={slots.spinner({ className: classNames?.spinner })}
+            <Icon
+              icon="line-md:loading-twotone-loop"
+              className={slots.spinner({
+                className: ["stroke-1.5", classNames?.spinner],
+              })}
             />
           ) : (
             startContent && (

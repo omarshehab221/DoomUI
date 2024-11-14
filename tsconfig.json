@@ -16,7 +16,11 @@
     "jsx": "react-jsx",
     "paths": {
       "@doom-ui/core": ["packages/core/src"],
-      "@doom-ui/components": ["packages/components/src"]
+      "@doom-ui/components": ["packages/components/src"],
+      "@plugins": ["packages/core/src/plugins"],
+      "@components": ["packages/core/src/components"],
+      "@theme": ["packages/core/src/theme"],
+      "@utils": ["packages/core/src/utils"]
     }
   },
   "include": ["packages/*/src"],

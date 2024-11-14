@@ -7,13 +7,9 @@
     "baseUrl": ".",
     "paths": {
       "@theme": ["./src/theme"],
-      "@theme/*": ["./src/theme/*"],
       "@plugins": ["./src/plugins"],
-      "@plugins/*": ["./src/plugins/*"],
       "@components": ["./src/components"],
-      "@components/*": ["./src/components/*"],
-      "@utils": ["./src/utils"],
-      "@utils/*": ["./src/utils/*"]
+      "@utils": ["./src/utils"]
     }
   },
   "include": ["src/**/*"],

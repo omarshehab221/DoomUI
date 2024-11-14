@@ -12,8 +12,7 @@ const __dirname = dirname(__filename);
 
 const resolveAlias = {
   entries: [
-    { find: '@components', replacement: pathResolve(__dirname, 'src/components') },
-    { find: '@icons', replacement: pathResolve(__dirname, 'src/icons') }
+    { find: '@components', replacement: pathResolve(__dirname, 'src/components') }
   ]
 };
 

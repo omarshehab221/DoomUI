@@ -1,2 +1,1 @@
-export * from "@components/Button";
-export * from "./icons";
+export * from "./components/Button";

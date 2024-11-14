@@ -1,5 +1,5 @@
 import plugin from 'tailwindcss/plugin';
-import { type ThemeConfig, defaultConfig } from '@theme/config';
+import { type ThemeConfig, defaultConfig } from '@theme';
 
 export const doomUI = (config: ThemeConfig = {}) => {
   const mergedConfig = {

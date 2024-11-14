@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { ChevronRight } from "@icons/ChevronRight";
 import { Button } from "./Button";
 import { createElement } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -103,17 +103,10 @@ export const Ghost: Story = {
   },
 };
 
-// export const Glow: Story = {
-//   args: {
-//     variant: "glow",
-//     children: "Button",
-//   },
-// };
-
 export const IconOnly: Story = {
   args: {
     isIconOnly: true,
-    children: createElement(ChevronRight, { className: "w-4 h-4" }),
+    children: createElement(Icon, { icon: "heroicons:chevron-right", className: "w-4 h-4" }),
   },
 };
 
@@ -133,14 +126,14 @@ export const Loading: Story = {
 
 export const StartContent: Story = {
   args: {
-    startContent: createElement(ChevronRight, { className: "w-4 h-4" }),
+    startContent: createElement(Icon, { icon: "heroicons:chevron-right", className: "w-4 h-4" }),
     children: "Button",
   },
 };
 
 export const EndContent: Story = {
   args: {
-    endContent: createElement(ChevronRight, { className: "w-4 h-4" }),
+    endContent: createElement(Icon, { icon: "heroicons:chevron-right", className: "w-4 h-4" }),
     children: "Button",
   },
 };
