@@ -4,12 +4,16 @@ import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
-import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { dirname, resolve as pathResolve } from 'node:path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const resolveAlias = {
   entries: [
-    { find: '@components', replacement: path.resolve(__dirname, 'src/components') },
-    { find: '@icons', replacement: path.resolve(__dirname, 'src/icons') }
+    { find: '@components', replacement: pathResolve(__dirname, 'src/components') },
+    { find: '@icons', replacement: pathResolve(__dirname, 'src/icons') }
   ]
 };
 
@@ -17,20 +21,22 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      file: 'dist/index.js',
+      dir: 'dist',
       format: 'cjs',
       sourcemap: true,
       preserveModules: true,
       preserveModulesRoot: 'src',
-      exports: 'named'
+      exports: 'named',
+      entryFileNames: '[name].js'
     },
     {
-      file: 'dist/index.esm.js',
+      dir: 'dist',
       format: 'esm',
       sourcemap: true,
       preserveModules: true,
       preserveModulesRoot: 'src',
-      exports: 'named'
+      exports: 'named',
+      entryFileNames: '[name].esm.js'
     }
   ],
   plugins: [

@@ -4,14 +4,18 @@ import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
-import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { dirname, resolve as pathResolve } from 'node:path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const resolveAlias = {
   entries: [
-    { find: '@theme', replacement: path.resolve(__dirname, 'src/theme') },
-    { find: '@plugins', replacement: path.resolve(__dirname, 'src/plugins') },
-    { find: '@components', replacement: path.resolve(__dirname, 'src/components') },
-    { find: '@utils', replacement: path.resolve(__dirname, 'src/utils') }
+    { find: '@theme', replacement: pathResolve(__dirname, 'src/theme') },
+    { find: '@plugins', replacement: pathResolve(__dirname, 'src/plugins') },
+    { find: '@components', replacement: pathResolve(__dirname, 'src/components') },
+    { find: '@utils', replacement: pathResolve(__dirname, 'src/utils') }
   ]
 };
 
@@ -19,20 +23,22 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      file: 'dist/index.js',
+      dir: 'dist',
       format: 'cjs',
       sourcemap: true,
       preserveModules: true,
       preserveModulesRoot: 'src',
-      exports: 'named'
+      exports: 'named',
+      entryFileNames: '[name].js'
     },
     {
-      file: 'dist/index.esm.js',
+      dir: 'dist',
       format: 'esm',
       sourcemap: true,
       preserveModules: true,
       preserveModulesRoot: 'src',
-      exports: 'named'
+      exports: 'named',
+      entryFileNames: '[name].esm.js'
     }
   ],
   plugins: [
@@ -45,7 +51,7 @@ export default {
     typescript({
       tsconfig: './tsconfig.json',
       declaration: true,
-      declarationDir: 'dist',
+      outDir: './dist',
       rootDir: 'src'
     }),
     postcss({
