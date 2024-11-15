@@ -230,3 +230,5 @@ export const Button = <T extends ElementType = "button">({
     </Component>
   );
 };
+
+Button.displayName = "Button";

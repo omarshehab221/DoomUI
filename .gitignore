@@ -35,3 +35,6 @@ yarn-error.log*
 
 # TypeScript
 *.tsbuildinfo
+
+# CLI Templates Components
+/packages/cli/templates/components

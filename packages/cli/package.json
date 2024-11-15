@@ -1,10 +1,20 @@
 {
   "name": "@doom-ui/cli",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omarshehab221/DoomUI.git",
     "directory": "packages/cli"
+  },
+  "homepage": "https://doom-ui.vercel.app",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/c/OmarShehab3615"
+  },
+  "author": {
+    "name": "Omar Shehab",
+    "email": "omarshehab3615@gmail.com",
+    "url": "https://github.com/omarshehab221"
   },
   "description": "CLI for Doom UI",
   "type": "module",
@@ -22,7 +32,7 @@
   "scripts": {
     "build": "bun scripts/copy-templates.ts && tsup src/index.ts --format esm --dts",
     "dev": "tsup src/index.ts --format esm --dts --watch",
-    "clean": "rimraf dist templates"
+    "clean": "rimraf dist templates/components"
   },
   "dependencies": {
     "commander": "^11.0.0",

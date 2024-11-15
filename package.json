@@ -2,12 +2,23 @@
   "name": "@doom-ui/monorepo",
   "private": true,
   "packageManager": "bun@1.1.33",
-  "git": {
-    "url": "https://github.com/doom-ui/doom-ui.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omarshehab221/DoomUI.git"
+  },
+  "homepage": "https://doom-ui.vercel.app",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/c/OmarShehab3615"
   },
   "workspaces": [
     "packages/*"
   ],
+  "author": {
+    "name": "Omar Shehab",
+    "email": "omarshehab3615@gmail.com",
+    "url": "https://github.com/omarshehab221"
+  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",

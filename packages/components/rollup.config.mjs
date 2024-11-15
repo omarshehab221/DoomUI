@@ -53,7 +53,6 @@ export default {
       declaration: true,
       declarationDir: "dist",
       rootDir: "src",
-      exclude: ["src/templates/**/*"],
     }),
     postcss({
       config: {
