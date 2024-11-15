@@ -1,4 +1,5 @@
-# [![DoomUI](https://doom-ui.vercel.app/doom-ui.svg)](https://doom-ui.vercel.app)
+# [![DoomUI](https://github.com/omarshehab221/DoomUI/blob/master/packages/website/public/doom-ui.svg)](https://doom-ui.vercel.app)
+<!-- # [![DoomUI](https://doom-ui.vercel.app/doom-ui.svg)](https://doom-ui.vercel.app) -->
 
 [![Featurebase](https://img.shields.io/badge/Featurebase-Roadmap-green.svg)](https://doomui.featurebase.app/roadmap)
 [![DoomUI Core](https://img.shields.io/npm/v/@doom-ui/core)](https://www.npmjs.com/package/@doom-ui/core)
