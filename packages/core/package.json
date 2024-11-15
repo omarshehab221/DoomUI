@@ -1,12 +1,22 @@
 {
   "name": "@doom-ui/core",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omarshehab221/DoomUI.git",
     "directory": "packages/core"
   },
   "homepage": "https://doom-ui.vercel.app",
+  "keywords": [
+    "ui",
+    "modern",
+    "react",
+    "tailwind",
+    "doom-ui",
+    "doomui",
+    "doom",
+    "core"
+  ],
   "funding": [
     {
       "type": "individual",

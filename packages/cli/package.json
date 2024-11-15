@@ -1,12 +1,22 @@
 {
   "name": "@doom-ui/cli",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omarshehab221/DoomUI.git",
     "directory": "packages/cli"
   },
   "homepage": "https://doom-ui.vercel.app",
+  "keywords": [
+    "ui",
+    "modern",
+    "react",
+    "tailwind",
+    "doom-ui",
+    "doomui",
+    "doom",
+    "cli"
+  ],
   "funding": [
     {
       "type": "individual",
