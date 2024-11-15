@@ -7,10 +7,20 @@
     "url": "git+https://github.com/omarshehab221/DoomUI.git"
   },
   "homepage": "https://doom-ui.vercel.app",
-  "funding": {
-    "type": "patreon",
-    "url": "https://www.patreon.com/c/OmarShehab3615"
-  },
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://www.thanks.dev/omarshehab221"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/omarshehab221"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/c/OmarShehab3615"
+    }
+  ],
   "workspaces": [
     "packages/*"
   ],
