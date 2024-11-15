@@ -2,6 +2,8 @@
 
 React components for the Doom UI library.
 
+> **This package is still under development and is not yet ready for production use.**
+
 ## Installation
 
 ```bash
