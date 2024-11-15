@@ -1,9 +1,9 @@
 {
   "name": "@doom-ui/core",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/doom-ui/doom-ui.git",
+    "url": "git+https://github.com/omarshehab221/DoomUI.git",
     "directory": "packages/core"
   },
   "private": false,
