@@ -8,6 +8,10 @@ React components for the Doom UI library.
 
 ```bash
 npm install @doom-ui/components @doom-ui/core
+yarn add @doom-ui/components @doom-ui/core
+pnpm add @doom-ui/components @doom-ui/core
+bun add @doom-ui/components @doom-ui/core
+deno add @doom-ui/components @doom-ui/core
 ```
 
 ## Usage

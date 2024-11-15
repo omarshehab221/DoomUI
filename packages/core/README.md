@@ -8,6 +8,10 @@ Core functionality for the Doom UI component library.
 
 ```bash
 npm install @doom-ui/core
+yarn add @doom-ui/core
+pnpm add @doom-ui/core
+bun add @doom-ui/core
+deno add @doom-ui/core
 ```
 
 ## Usage
