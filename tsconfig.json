@@ -23,7 +23,7 @@
       "@utils": ["packages/core/src/utils"]
     }
   },
-  "include": ["packages/*/src"],
+  "include": ["packages/*/src", "packages/cli/templates/config"],
   "exclude": [
     "node_modules",
     "**/dist",

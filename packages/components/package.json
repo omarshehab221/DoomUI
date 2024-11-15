@@ -1,13 +1,12 @@
 {
   "name": "@doom-ui/components",
-  "version": "0.1.0-3",
+  "version": "0.2.1",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "dist/templates"
+    "dist"
   ],
   "exports": {
     ".": {
@@ -17,7 +16,7 @@
     }
   },
   "peerDependencies": {
-    "@doom-ui/core": "^0.1.0",
+    "@doom-ui/core": "^0.2.1",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
     "@iconify/react": "^5.0.2"
@@ -52,6 +51,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "rollup -c",
+    "clean": "rimraf dist",
     "test": "jest"
   }
 }

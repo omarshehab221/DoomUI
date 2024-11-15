@@ -1,8 +1,15 @@
 import path from "node:path";
 import fs from "fs-extra";
 import ora from "ora";
-import { logger } from "../utils/logger";
+import { logger } from "../utils/logger.js";
 import { execSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Copy templates to CLI package
+const TEMPLATES_DIR = path.join(__dirname, "../templates/components");
 
 const COMPONENTS_MAP = {
   button: {
@@ -29,15 +36,15 @@ export default async function add(componentName: string) {
     // Install dependencies if needed
     if (component.dependencies.length > 0) {
       spinner.text = 'Installing dependencies...';
-      execSync(`npm install ${component.dependencies.join(' ')}`, { stdio: 'inherit' });
+      execSync(`npm install ${component.dependencies.join(' ')} --force`, { stdio: 'inherit' });
     }
 
     const componentDir = path.join(process.cwd(), 'components', 'doom-ui', componentName);
     await fs.ensureDir(componentDir);
 
-    // Copy component files
+    // Copy component files from CLI templates
     for (const file of component.files) {
-      const sourcePath = path.join(__dirname, `../templates/components/${file}`);
+      const sourcePath = path.join(TEMPLATES_DIR, file);
       const destPath = path.join(componentDir, path.basename(file));
       await fs.copyFile(sourcePath, destPath);
     }
