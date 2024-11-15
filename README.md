@@ -11,3 +11,10 @@
 DoomUI is a component library for React that is designed to be used with the Doom UI CLI.
 
 > **This package is still under development and is not yet ready for production use.**
+
+---
+**Just so you know,**
+
+> ***Community contributions are really welcome!***
+
+---
