@@ -22,7 +22,8 @@
     }
   ],
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "author": {
     "name": "Omar Shehab",
