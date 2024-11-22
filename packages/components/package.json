@@ -1,12 +1,12 @@
 {
   "name": "@doom-ui/components",
-  "version": "0.3.3",
+  "version": "0.3.5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omarshehab221/DoomUI.git",
     "directory": "packages/components"
   },
-  "homepage": "https://doom-ui.vercel.app",
+  "homepage": "https://doom-ui-components.vercel.app/",
   "keywords": [
     "ui",
     "modern",
