@@ -84,7 +84,7 @@
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "VERCEL=true storybook build --config-dir ../../.storybook",
+    "build-storybook": "storybook build --config-dir ../../.storybook",
     "build": "rollup -c",
     "clean": "rimraf dist",
     "test": "jest"

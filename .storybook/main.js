@@ -1,9 +1,10 @@
 const path = require("node:path");
 
 const config = {
-  stories: process.env.VERCEL 
-    ? ["./src/**/*.mdx", "./src/**/*.stories.@(js|jsx|mjs|ts|tsx)"]
-    : ["../packages/*/src/**/*.mdx", "../packages/*/src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: [
+    "../packages/*/src/**/*.mdx",
+    "../packages/*/src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+  ],
   addons: [
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
