@@ -1,7 +1,6 @@
-import path from "node:path";
-import type { StorybookConfig } from "@storybook/react-webpack5";
+const path = require("node:path");
 
-const config: StorybookConfig = {
+const config = {
   stories: [
     "../packages/*/src/**/*.mdx",
     "../packages/*/src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
@@ -39,7 +38,6 @@ const config: StorybookConfig = {
         "@utils": path.resolve(__dirname, "../packages/core/src/utils"),
       };
       
-      // Add TypeScript extensions
       config.resolve.extensions = [
         ...(config.resolve.extensions || []),
         '.ts',
@@ -48,7 +46,6 @@ const config: StorybookConfig = {
     }
 
     if (config.module?.rules) {
-      // Add TypeScript rule
       config.module.rules.push({
         test: /\.tsx?$/,
         use: [
@@ -65,7 +62,6 @@ const config: StorybookConfig = {
         ],
       });
 
-      // CSS rules
       config.module.rules.push({
         test: /\.css$/,
         use: [
@@ -84,4 +80,4 @@ const config: StorybookConfig = {
   },
 };
 
-export default config;
+module.exports = config; 

@@ -36,7 +36,7 @@
     "lint": "turbo run lint",
     "clean": "turbo run clean",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "tsc -p .storybook/tsconfig.json && storybook build",
+    "build-storybook": "storybook build",
     "website:dev": "turbo run dev --filter=website",
     "website:build": "turbo run build --filter=website"
   },

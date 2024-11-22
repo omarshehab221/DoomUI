@@ -44,3 +44,6 @@ yarn-error.log*
 
 # Storybook
 /storybook-static
+
+# igonreable files
+**/*/_*

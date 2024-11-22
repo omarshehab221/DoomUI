@@ -1,8 +1,7 @@
-import type { Preview } from "@storybook/react";
 import { withThemeByClassName } from "@storybook/addon-themes";
 import "./preview.css";
 
-const preview: Preview = {
+const preview = {
   parameters: {
     controls: {
       matchers: {
@@ -25,4 +24,4 @@ const preview: Preview = {
   ],
 };
 
-export default preview;
+export default preview; 
