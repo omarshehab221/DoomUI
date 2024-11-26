@@ -30,12 +30,12 @@ const config = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
+        "@doom-ui/core": path.resolve(__dirname, "../../core/src"),
         "@doom-ui/components": path.resolve(__dirname, "../src"),
-        // "@doom-ui/core": path.resolve(__dirname, "../../core/src"),
-        // "@plugins": path.resolve(__dirname, "../../core/src/plugins"),
-        // "@components": path.resolve(__dirname, "../../core/src/components"),
-        // "@theme": path.resolve(__dirname, "../../core/src/theme"),
-        // "@utils": path.resolve(__dirname, "../../core/src/utils"),
+        "@plugins": path.resolve(__dirname, "../../core/src/plugins"),
+        "@components": path.resolve(__dirname, "../../core/src/components"),
+        "@theme": path.resolve(__dirname, "../../core/src/theme"),
+        "@utils": path.resolve(__dirname, "../../core/src/utils"),
       };
       
       config.resolve.extensions = [
