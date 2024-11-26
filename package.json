@@ -35,8 +35,6 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build --config-dir .storybook",
     "website:dev": "turbo run dev --filter=website",
     "website:build": "turbo run build --filter=website"
   },
