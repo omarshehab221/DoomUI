@@ -86,7 +86,7 @@
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "bun install && storybook build",
+    "build-storybook": "storybook build",
     "build": "rollup -c",
     "clean": "rimraf dist",
     "test": "jest"
