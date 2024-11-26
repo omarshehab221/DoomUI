@@ -28,21 +28,16 @@ const config = {
   },
   webpackFinal: async (config) => {
     if (config.resolve) {
+      config.resolve.modules = [
+        path.resolve(__dirname, '../../../node_modules'),
+        path.resolve(__dirname, '../node_modules'),
+        'node_modules'
+      ];
+
       config.resolve.alias = {
         ...config.resolve.alias,
         "@doom-ui/components": path.resolve(__dirname, "../src"),
-        // "@doom-ui/core": path.resolve(__dirname, "../../core/src"),
-        // "@plugins": path.resolve(__dirname, "../../core/src/plugins"),
-        // "@components": path.resolve(__dirname, "../../core/src/components"),
-        // "@theme": path.resolve(__dirname, "../../core/src/theme"),
-        // "@utils": path.resolve(__dirname, "../../core/src/utils"),
       };
-      
-      config.resolve.modules = [
-        ...(config.resolve.modules || []),
-        path.resolve(__dirname, "../node_modules"),
-        "node_modules"
-      ];
       
       config.resolve.extensions = [
         ...(config.resolve.extensions || []),
