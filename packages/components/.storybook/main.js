@@ -32,10 +32,7 @@ const config = {
         ...config.resolve.alias,
         "@doom-ui/core": path.resolve(__dirname, "../../core/src"),
         "@doom-ui/components": path.resolve(__dirname, "../src"),
-        "@plugins": path.resolve(__dirname, "../../core/src/plugins"),
-        "@components": path.resolve(__dirname, "../../core/src/components"),
-        "@theme": path.resolve(__dirname, "../../core/src/theme"),
-        "@utils": path.resolve(__dirname, "../../core/src/utils"),
+        "@components": path.resolve(__dirname, "../src/components"),
       };
       
       config.resolve.extensions = [
