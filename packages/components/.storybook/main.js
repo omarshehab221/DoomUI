@@ -38,12 +38,6 @@ const config = {
         // "@utils": path.resolve(__dirname, "../../core/src/utils"),
       };
       
-      config.resolve.modules = [
-        ...(config.resolve.modules || []),
-        path.resolve(__dirname, "../node_modules"),
-        "node_modules"
-      ];
-      
       config.resolve.extensions = [
         ...(config.resolve.extensions || []),
         '.ts',
