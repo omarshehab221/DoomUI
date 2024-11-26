@@ -2,8 +2,8 @@ const path = require("node:path");
 
 const config = {
   stories: [
-    "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../packages/*/src/**/*.mdx",
+    "../packages/*/src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
     "@storybook/addon-essentials",
@@ -30,9 +30,12 @@ const config = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        "@doom-ui/core": path.resolve(__dirname, "../../core/src"),
-        "@doom-ui/components": path.resolve(__dirname, "../src"),
-        "@components": path.resolve(__dirname, "../src/components"),
+        "@doom-ui/core": path.resolve(__dirname, "../packages/core/src"),
+        "@doom-ui/components": path.resolve(__dirname, "../packages/components/src"),
+        "@plugins": path.resolve(__dirname, "../packages/core/src/plugins"),
+        "@components": path.resolve(__dirname, "../packages/core/src/components"),
+        "@theme": path.resolve(__dirname, "../packages/core/src/theme"),
+        "@utils": path.resolve(__dirname, "../packages/core/src/utils"),
       };
       
       config.resolve.extensions = [
